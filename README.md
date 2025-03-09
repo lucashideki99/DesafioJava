@@ -1,4 +1,5 @@
 O servidor utilizado, foi o tomcat 9
+
 Para rodar a aplicação deverá criar o banco de dados no MySQL, segue os comandos para criar o banco:
 
 create DATABASE desafioJava;
