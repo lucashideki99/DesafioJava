@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?link rel="stylesheet" type="text/css" href="/css/bootstrap.css"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window title="Cadastro de Produto" id="win" use="controller.ProdutoController">
+        
+ 
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label value="Descrição:"/>
+            </div>
+            <div class="col-sm-10">
+                <textbox id="descricao" maxlength="50" constraint="no empty: Descrição não pode ser vazio!" style="width: 100%; max-width: 300px;"/>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label value="Data de Validade:"/>
+            </div>
+            <div class="col-sm-10">
+                <datebox id="dataValidade" format="dd/MM/yyyy" maxlength="10" style="width: 100%; max-width: 300px;"/>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label value="Data de Cadastro:"/>
+            </div>
+            <div class="col-sm-10">
+                <datebox id="dataCadastro" format="dd/MM/yyyy" maxlength="10" style="width: 100%; max-width: 300px;"/>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label value="Preço:"/>
+            </div>
+            <div class="col-sm-10">
+                <decimalbox id="preco" 
+                            format="R$##0.00" 
+                            constraint="no empty: Preço não pode ser vazio!"
+                            maxlength="16" 
+                            style="width: 100%; max-width: 300px;"/>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-sm-2">
+                <label value="Ativo:"/>
+            </div>
+            <div class="col-sm-10">
+                <checkbox id="ativo" />
+            </div>
+        </div>
+        <div class="position-fixed bottom-0 end-0 p-3">
+            <div class="d-flex">
+                <div class="col text-end">
+                    <button id="btnLimpar" label="Limpar" onClick="win.limparCampos()"/>
+                    <button id="btnGravar" label="Gravar" onClick="win.gravarCampo()"/>
+                </div>
+            </div>
+        </div>   
+            
+    </window>
+    
+</zk>

@@ -1,0 +1,5 @@
+Model\Produto.class
+DAO\ProdutoDAO.class
+controller\ProdutoController.class
+Service\ProdutoService.class
+Util\HibernateUtil.class
